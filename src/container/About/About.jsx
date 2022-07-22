@@ -1,27 +1,43 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.scss";
+import { images } from "../../constants";
 
 const abouts = [
   {
     title: "Web Development",
     description: "I am a good web developer",
-    ImgURL: "",
+    ImgURL: images.about01,
   },
   {
     title: "Web Development",
     description: "I am a good web developer",
-    ImgURL: "",
+    ImgURL: images.about02,
   },
   {
     title: "Web Development",
     description: "I am a good web developer",
-    ImgURL: "",
+    ImgURL: images.about03,
   },
   {
     title: "Web Development",
     description: "I am a good web developer",
-    ImgURL: "",
+    ImgURL: images.about04,
+  },
+  {
+    title: "Web Development",
+    description: "I am a good web developer",
+    ImgURL: images.about04,
+  },
+  {
+    title: "Web Development",
+    description: "I am a good web developer",
+    ImgURL: images.about04,
+  },
+  {
+    title: "Web Development",
+    description: "I am a good web developer",
+    ImgURL: images.about04,
   },
 ];
 
@@ -29,12 +45,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know That{" "}
-        <span>
-          Good <br /> Design{" "}
-        </span>
-        means
-        <span> Good Business</span>
+        <span>Discipline</span> will take <br /> were
+        <span> motivation </span>won't
       </h2>
 
       <div className="app__profiles">
