@@ -1,51 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./About.scss";
-import { images } from "../../constants";
-
-const abouts = [
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about01,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about02,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about03,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about04,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about04,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about04,
-  },
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    ImgURL: images.about04,
-  },
-];
+// import { images } from "../../constants";
+import { urlFor, client } from "../../client";
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => setAbouts(data));
+  }, []);
+
   return (
     <>
       <h2 className="head-text">
-        <span>Discipline</span> will take <br /> were
+        <span>Discipline</span> will take <br />
+        you were
         <span> motivation </span>won't
       </h2>
 
@@ -58,13 +30,13 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.ImgURL} alt={about.title} />
+            <img src={urlFor(about.imgUrl)} alt={about.title} />
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
             <p className="p-text" style={{ marginTop: 10 }}>
               {about.description}
-            </p>
+            </p>  
           </motion.div>
         ))}
       </div>
