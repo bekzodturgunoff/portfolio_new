@@ -17,7 +17,7 @@ const About = () => {
     <>
       <h2 className="head-text">
         <span>Discipline</span> will take <br />
-        you were
+        you where
         <span> motivation </span>won't
       </h2>
 
@@ -36,7 +36,7 @@ const About = () => {
             </h2>
             <p className="p-text" style={{ marginTop: 10 }}>
               {about.description}
-            </p>  
+            </p>
           </motion.div>
         ))}
       </div>

@@ -1,6 +1,6 @@
 import "./App.scss";
 import { About, Footer, Header, Project, Skill } from "./container";
-import { Navbar } from "./components";
+import { Navbar, SocialMedia } from "./components";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <About />
       <Skill />
       <Project />
+      <SocialMedia />
       <Footer />
     </div>
   );
